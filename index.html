@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Poké Depths</title>
+  <title></title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="loading">
@@ -37,10 +37,18 @@
   </div>
 
   <!-- Custom overlay image -->
-  <img src="images/Custom.png" alt="Wedding Submarine" class="custom-overlay" id="customOverlay" />
+  <img src="images/custom.png" alt="Wedding Submarine" class="custom-overlay" id="customOverlay" />
 
-  <!-- Info button as direct link -->
-  <a class="info-button" href="https://github.com/Ebola16/CSwedding" target="_blank" rel="noopener noreferrer"></a>
+  <!-- Info button (link set by JS) -->
+  <a class="info-button" id="infoButton" target="_blank" rel="noopener noreferrer"></a>
+
+  <script>
+    const projectName = "CSwedding";
+    document.title = projectName;
+    const projectUrl = `https://github.com/Ebola16/${projectName}`;
+    const infoButton = document.getElementById("infoButton");
+    infoButton.href = projectUrl;
+  </script>
 
   <script src="scripts.js"></script>
 </body>
